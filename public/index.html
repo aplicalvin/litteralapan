@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Littera Lapan - Arsip surat SMKN 8 Semarang</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/output.css" />
+		<link rel="stylesheet" href="css/tambahan.css" />
+		<!-- Flowbite -->
+		<!-- <link rel="stylesheet" href="css/flowbite.min.css" /> -->
+		<!-- <link rel="shortcut icon" href="asset/favicon.png" type="image/x-icon" /> -->
+	</head>
+	<body>
+		<div class="block md:flex max-w-screen-2xl mx-auto">
+			<!-- Component Sidebar -->
+			<div
+				class="md:flex flex-col md:flex-row md:min-h-screen w-full md:w-64 px-5 md:px-2 md:py-8"
+			>
+				<div
+					@click.away="open = false"
+					class="flex flex-col w-full md:w-60 text-stone-700 bg-white dark-mode:text-stone-200 dark-mode:bg-gray-800 flex-shrink-0"
+					x-data="{ open: false }"
+				>
+					<!-- Header pada Sidebar -->
+					<div
+						class="flex-shrink-0 px-0 py-4 md:px-4 flex flex-row items-center justify-between"
+					>
+						<div class="block md:text-center w-full py-2">
+							<a
+								href="#"
+								class="text-xl font-semibold tracking-custom text-indigo-700 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+							>
+								<!-- Logo pada tampilan Tablet -->
+								<img
+									src="asset/favicon.png"
+									class="w-16 hidden md:block lg:hidden mx-auto"
+								/>
+								<!-- Kata kata -->
+								<p class="md:hidden lg:block">Littera Lapan</p>
+							</a>
+							<!-- <hr class="bg-red w-full"> -->
+						</div>
+						<button
+							class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+							@click="open = !open"
+						>
+							<svg fill="currentColor" viewBox="0 0 20 20" class="w-7 h-7">
+								<path
+									x-show="!open"
+									fill-rule="evenodd"
+									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								></path>
+								<path
+									x-show="open"
+									fill-rule="evenodd"
+									d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</button>
+						<!-- <hr class="text-stone-400"> -->
+						<!-- Ini Garis -->
+					</div>
+					<!-- Menu -->
+					<nav
+						:class="{'flex': open, 'hidden': !open}"
+						class="flex flex-grow md:flex flex-col px-4 pb-4 md:pb-0 md:gap-1 md:overflow-y-auto"
+					>
+						<!-- Dashboard -->
+						<a
+							class="flex gap-2 px-6 py-3 mt-2 text-sm font-semibold text-stone-200 bg-indigo-700 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-indigo-100 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-stone-200 hover:text-stone-700 focus:text-stone-800 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							href="index.html"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+								/>
+							</svg>
+							<p class="block md:hidden lg:block">Dashboard</p>
+						</a>
+						<!-- Surat Masuk -->
+						<a
+							class="flex gap-2 px-6 py-3 mt-2 text-sm font-semibold text-stone-500 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-indigo-100 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-stone-200 hover:text-stone-700 focus:text-stone-800 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							href="surat-masuk/index.html"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+								/>
+							</svg>
+							<p class="block md:hidden lg:block">Surat Masuk</p>
+						</a>
+						<!-- Surat Keluar -->
+						<a
+							class="flex gap-2 px-6 py-3 mt-2 text-sm font-semibold text-stone-500 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-indigo-100 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-stone-200 hover:text-stone-700 focus:text-stone-800 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							href="surat-keluar/index.html"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h5a1 1 0 000-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM13 16a1 1 0 102 0v-5.586l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 101.414 1.414L13 10.414V16z"
+								/>
+							</svg>
+							<p class="block md:hidden lg:block">Surat Keluar</p>
+						</a>
+						<!-- Administrator -->
+						<a
+							class="flex gap-2 px-6 py-3 mt-2 text-sm font-semibold text-stone-500 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-indigo-100 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-stone-200 hover:text-stone-700 focus:text-stone-800 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							href="administrator/index.html"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<p class="block md:hidden lg:block">Administrator</p>
+						</a>
+
+						<!-- logout -->
+						<a
+							data-modal-toggle="logout-modal"
+							class="flex gap-2 px-6 py-3 mt-2 text-sm font-semibold text-stone-500 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-indigo-100 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-stone-200 hover:text-stone-700 focus:text-stone-800 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+							href="#"
+							aria-hidden="true"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+								/>
+							</svg>
+							<p class="block md:hidden lg:block">Log Out</p>
+						</a>
+					</nav>
+				</div>
+				<!-- JavaScript -->
+				<script
+					src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+					defer
+				></script>
+			</div>
+
+			<!-- LOgout Modal -->
+
+			<div
+				id="logout-modal"
+				tabindex="-1"
+				aria-hidden="true"
+				class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-opacity-20"
+			>
+				<div class="relative p-4 w-full max-w-md h-full md:h-auto">
+					<!-- Modal content -->
+					<div class="relative bg-slate-50 rounded-lg shadow">
+						<button
+							type="button"
+							class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+							data-modal-toggle="logout-modal"
+						>
+							<svg
+								aria-hidden="true"
+								class="w-5 h-5"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+							<span class="sr-only cekbang">Close modal</span>
+						</button>
+						<div class="py-6 px-6 lg:px-8">
+							<h3
+								class="mb-4 text-xl font-medium text-slate-900 dark:text-white"
+							>
+								Anda yakin ingin Keluar?
+							</h3>
+							<!-- Formulir -->
+							<form class="space-y-6" action="#">
+								<div class="flex gap-2">
+									<!-- Tidak -->
+									<button
+										type="button"
+										class="w-full text-white bg-rose-700 hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+									>
+										Tidak
+									</button>
+
+									<!-- Ya -->
+									<button
+										type="button"
+										class="w-full text-slate-700 bg-white hover:bg-rose-600 hover:text-white hover:border-none border-rose-300 border-2 focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+									>
+										Ya
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- CSS Tambahan -->
+			<link
+				rel="stylesheet"
+				href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+			/>
+			<script
+				src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
+				defer
+			></script>
+
+
+			<script src="css/flowbite.js"></script>
+
+			<!-- component  Table-->
+			<div class="antialiased h-screen w-full text-slate-700">
+				<div class="container mx-auto py-6 px-4" x-data="datatables()" x-cloak>
+					<!-- Heading -->
+					<h1 class="text-3xl md:py-4 border-b mb-10 font-bold text-slate-900">Halo, Admin!</h1>
+					<div class="flex flex-col gap-4">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Exercitationem dolorum quibusdam voluptate velit animi fugiat non
+							voluptas atque minus in cumque odit ex molestias qui consectetur
+							aliquid, nulla cupiditate temporibus? Quo deleniti, quas quibusdam
+							ullam nemo mollitia facilis sequi assumenda neque corporis dolorem
+							tenetur, sunt rerum consequatur perspiciatis est iste!
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Exercitationem dolorum quibusdam voluptate velit animi fugiat non
+							voluptas atque minus in cumque odit ex molestias qui consectetur
+							aliquid, nulla cupiditate temporibus? Quo deleniti, quas quibusdam
+							ullam nemo mollitia facilis sequi assumenda neque corporis dolorem
+							tenetur, sunt rerum consequatur perspiciatis est iste!
+						</p>
+						<p>
+							Ayo jadi pacarnya Yohanes Dwikki
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
