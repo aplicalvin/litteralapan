@@ -6,3 +6,7 @@
 .cekbang {
   border: 1px solid red;
 }
+
+.bg-bang {
+  background-image: url("../asset/image/bg-login.png");
+}
